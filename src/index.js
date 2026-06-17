@@ -6,17 +6,20 @@
 // require('dotenv').config({path: './env'})  this was a defualt but we use import vala syntax because code mai hmne sari jgah voh use kiya hai 
 
 import dotenv from "dotenv"
-
 import connectDB from "./db/index.js"
-
-
-
 dotenv.config({
     path: './env'
 })
 
 
-connectDB();
+connectDB()
+    .then(() => {
+        app.listen(process.env.PORT || 8000, () => {
+            console.log(`server is running at a ${process.env.PORT}`);
+        })
+    }).catch((err) => {
+        console.log("momgdb connection was failed:", err);
+    })
 
 
 
