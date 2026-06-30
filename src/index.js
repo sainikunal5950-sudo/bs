@@ -4,14 +4,14 @@
 
 
 // require('dotenv').config({path: './env'})  this was a defualt but we use import vala syntax because code mai hmne sari jgah voh use kiya hai 
-
+import { app } from "./app.js";
 import dotenv from "dotenv"
 import connectDB from "./db/index.js"
 dotenv.config({
     path: './env'
 })
 
-
+// bhai hmne upr ye kiya hnn import vala use dotenv ko lana koo lia toh esme hmne scripts mai likha hn expermintal krne do hme 
 connectDB()
     .then(() => {
         app.listen(process.env.PORT || 8000, () => {
@@ -55,3 +55,7 @@ connectDB()
 
 //         }
 //     })()
+
+
+
+

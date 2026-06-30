@@ -10,6 +10,9 @@ app.use(cors({
     credentials: true
 }))
 
+
+// BHAI YE app.use kr rha hai hmm jb  middlware type jaise ki secruity reason 
+
 app.use(express.json({ limit: "16kb" }))   // 16 kb se jyda data aya toh block krd e
 app.use(express.urlencoded({ extended: true, limit: "16kb" }))   // ye us data ko object mai convert krta hai form ka 
 app.use(express.static("public"))   // public folder ka andr jo bhi unko direct browser ko access krne do 

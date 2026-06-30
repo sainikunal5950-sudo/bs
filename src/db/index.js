@@ -16,3 +16,15 @@ const connectDB = async () => {
 
 
 export default connectDB;
+
+
+// bhai upr vale code pura overview hnn ki jaise ki mongoose.connect ek mongoose.connect ek connection instance object return krega bhai
+// esobject ka andr details hogi connectionInstance = {
+//    connection: {
+//       host: "cluster0.mongodb.net",
+//       port: 27017,
+//       name: "myDatabase"
+//    }
+// }
+
+// connection.host se
